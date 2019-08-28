@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: htmldemo
+  cloud:
+    nacos:
+      config:
+        server-addr: 123.56.16.37:8848
+      discovery:
+        server-addr: 123.56.16.37:8848
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    mode: HTML5
+    encoding: utf-8
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
